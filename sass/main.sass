@@ -1,0 +1,597 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #B2B2B2
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 20px
+	min-width: 320px
+	position: relative
+	line-height: 1
+	font-family: $default-font
+	overflow-x: hidden
+	background-image: url(../img/document_bg.jpg)
+	color: #fff
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+
+a, button, input 
+	transition: all .4s
+	outline: none !important	
+	&:hover
+		text-decoration: none
+
+.button
+	color: $accent
+	font-size: 20px
+	display: inline-block
+	border: 2px solid $accent
+	height: 80px
+	line-height: 80px
+	outline: none !important
+	&:hover
+		color: #000
+		background-color: $accent
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+section
+	text-align: center
+	font-weight: bold
+h2 
+	text-transform: uppercase
+	font-size: 38px
+	text-transform: uppercase
+	color: $accent
+.owl-carousel
+	.owl-stage-outer
+		z-index: 2
+.owl-nav
+	position: absolute
+	height: 100%
+	width: 100%
+	top: 0
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	.owl-prev, .owl-next
+		position: absolute
+		width: 47px	
+	.owl-prev
+		left: -60px
+	.owl-next
+		right: -60px
+
+.usluga
+	position: relative
+	.composition
+		font-size: 22px
+		border-bottom: 2px solid #fff
+		padding-bottom: 18px
+		margin-bottom: 14.2px
+		display: inline-block
+	.title
+		color: #fff
+		position: absolute
+		width: 100%
+		top: 79.3px
+		h3
+			text-transform: uppercase
+			font-size: 26px
+			margin-bottom: 24.1px
+	.info
+		display: inline-block
+		font-size: 22px
+		height: 21px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+		div
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			margin: 0 15px
+		.time
+			img
+				width: 21.6px
+				display: inline-block
+				margin: 0 6.5px
+	.bdr_wrap
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		padding: 50px
+		transition: all .5s
+		opacity: 0
+		.border
+			width: 100%
+			height: 100%
+			border: 2px solid $accent
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: center
+			align-items: flex-end
+			padding-bottom: 40px
+			.button 
+				width: 186px
+	&:hover
+		.bdr_wrap
+			opacity: 1
+			padding: 23px
+
+.banner
+	background-color: rgba(0, 0, 0, .45)
+	padding: 40px
+	.inner
+		border: 2px solid $accent
+
+.toggled
+	display: none
+
+.toggle_mnu
+	cursor: pointer
+	background: none
+	position: absolute
+	padding-top: 7px
+	z-index: 100
+	border: none
+	right: 42.1px
+	top: 30px
+	span
+	  display: block
+	.label
+		font-size: 12px !important
+		margin-bottom: 0
+		transition: all .3s
+		font-weight: bold
+		color: #fff
+		display: block
+	&.active
+  	.label
+  		margin-top: 8px
+.toggle_mnu:focus
+  outline: none  
+
+
+$w: 38px
+$h: 3.5px
+
+.sandwich 
+  width: $w
+  height: 18px
+  margin: auto
+  z-index: 200
+
+.sw-topper
+  position: relative
+  top: 0
+  width: $w 
+  height: $h
+  background: $accent
+  border: none
+  transition: transform 0.5s, top 0.2s
+  display: block
+      
+  //transition-delay: 0.2s, 0s
+.sw-bottom
+  position: relative
+  width: $w
+  height: $h 
+  top: $h
+  background: $accent
+  border: none
+  transition: transform 0.5s, top 0.2s
+  transition-delay: 0.2s, 0s
+.sw-footer
+  position: relative
+  width: $w
+  height: $h
+  top: $h * 2
+  background: $accent
+  border: none
+  transition: all 0.5s
+  transition-delay: 0.1s
+.sandwich.active
+  .sw-topper
+    top: 9px
+    transform: rotate(-45deg)
+  .sw-bottom
+    top: 6px
+    transform: rotate(45deg)
+  .sw-footer
+    opacity: 0
+    top: 0
+    transform: rotate(180deg)
+
+.parallax
+	background-position: center center !important
+	background-size: cover !important
+
+header
+	overflow: hidden
+	position: relative
+	.menu
+		width: 325px
+		font-size: 18px
+		position: absolute
+		height: 100%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		background-color: #151D2D
+		z-index: 2
+		text-align: center
+		right: -325px
+		transition: all 1s
+		padding-top: 114px
+		font-weight: bold
+		text-align: center
+		justify-content: space-around
+		padding-bottom: 33px
+		&.active
+			right: 0
+		nav
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			height: 45%
+			a 
+				color: #fff
+				display: block
+				&:hover
+					color: $accent
+		.button
+			width: 186px
+			margin: 0 auto
+		p 
+			margin-bottom: 0
+			a 
+				color: #fff
+				display: block
+				&:hover
+					color: $accent
+			.img-responsive
+				width: 30px
+				display: inline-block
+				margin: 0 13.5px
+		.work
+			height: 32px
+			line-height: 32px
+		.adult
+			display: block
+			margin: 0 auto
+			position: static
+
+#head
+	min-height: 100vh
+	width: 100%
+	position: relative
+	padding-top: 86px	
+	padding-bottom: 147.8px
+	background-image: url(../img/main_bg.jpg)
+	.text_wrap
+		min-height: 100vh
+		width: 100%
+		text-align: center
+		.logo
+			width: 262px
+			margin: 0 auto
+		.button
+			margin: 15px 40.45px
+			width: 186px
+			align-items: center
+	h1
+		font-size: 48px
+		margin-top: 55px
+		margin-bottom: 60.7px
+		color:#fff
+		text-transform: uppercase
+		text-shadow: 0 0 15px #fff
+	p
+		font-size: 22.2px
+		color: #fff
+		a 
+			font-size: 37.2px
+			color: #fff
+			&:hover
+				color:#fff
+		.img-responsive
+			width: 30px
+			display: inline-block
+			margin: 0 13.5px
+	.work
+		height: 32px
+		line-height: 32px
+		margin-bottom: 41.8px
+.adult
+	position: absolute
+	width: 83px
+	right: 35px
+	bottom: 67.8px
+#massage
+	padding-bottom: 149.2px
+	h2
+		margin: 114.2px 0 78.2px
+
+#stock
+	padding: 196.2px 0
+	background-image: url(../img/stock_bg.jpg)
+	.inner
+		padding: 78.5px 20px 125.9px
+		h3
+			font-size: 50px
+			margin: 70px 0 63px
+			text-transform: uppercase
+
+#programms
+	padding-bottom: 154px
+	.button
+		width: 267px
+		margin-top: 76.8px
+		background-color: inherit
+		&:hover
+			background-color: $accent
+	h2
+		margin: 122px 0 66px
+	.usluga
+		h3
+			margin-bottom: 18px
+			position: relative
+			display: inline-block
+			span
+				width: 19px
+				height: 28.9px
+				background-image: url(../img/rabbit.svg)
+				display: inline-block
+				margin: 0 7px
+				position: absolute
+				left: -32px
+				bottom: 0
+#addon
+	background-image: url(../img/addon_bg.jpg)
+	padding: 53.8px 0 44.2px
+	.inner
+		padding: 34px 0 26px
+	.line
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		padding: 13px 15%
+	.button
+		margin-top: 34px
+		width: 186px
+
+#girls
+	padding: 131px 0 170px
+	h2
+		margin-bottom: 73px
+	.item
+		position: relative
+		display: block
+		p
+			font-size: 24px
+			color: #fff
+			position: absolute
+			bottom: 36px
+			width: 100%
+		.wrap
+			width: 100%
+			height: 100%
+			display: block
+			position: absolute
+			padding: 30px
+			top: 0
+			opacity: 0
+			transition: all .4s
+			&:hover
+				padding: 18px
+				opacity: 1
+			.bdr
+				border: 1.5px solid #fff
+				display: block
+				width: 100%
+				height: 100%
+
+#telephone
+	background-image: url(../img/telephone_bg.jpg)
+	padding: 196px 0
+	.inner
+		padding: 0 20px 65px
+	h2
+		font-size: 29px
+		color: #fff
+	.logo
+		width: 158px
+		margin: 31px auto 
+	a 
+		font-size: 60px
+		color: #fff
+		&:hover
+			color: #fff
+
+#vacancy
+	padding: 85px 0 157px
+	.content
+		position: relative
+		img
+			position: relative
+			z-index: -1
+		.wrap
+			position: absolute
+			width: 100%
+			height: 100%
+			padding: 40px
+			.bdr
+				width: 100%
+				height: 100%
+				border: 1.5px solid	$accent
+	h2
+		margin-bottom: 53px
+	.button
+		margin-top: 48px
+		padding: 34px 44px
+		height: auto
+		line-height: 1
+	.info
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		flex-wrap: wrap
+		align-items: center
+		justify-content: center
+		height: 100%
+		padding-right: 25px
+footer
+	font-size: 16px
+	font-weight: bold
+	padding-bottom: 40px
+	.container
+		border-top: 1.5px solid #fff
+		.logo
+			width: 95px	
+		.first
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			p
+				margin: 13px 20px 0
+		.second
+			text-align: center
+			padding-top: 13px
+			a 
+				color: #fff
+				&:hover
+					color: #fff
+		.third
+			padding-top: 11px
+		.copy
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			font-size: 12px
+			justify-content: flex-end
+			margin-top: 10px
+			img
+				width: 30px
+				margin: 0 5px
+			p
+				margin-bottom: 0
+			a
+				font-weight: normal
+				color: #fff
+				font-size: 13px
+
+.form_wrap
+	background-color: #fff
+	padding: 30px
+	text-align: center
+	max-width: 623px
+	margin: 0 auto
+	h2
+		margin-bottom: 0
+	p
+		color: #000	
+		line-height: 22px
+		font-weight: bold
+		margin: 40px 0
+	button
+		background-color: inherit
+		width: 186px
+		margin-top: 40px
+	#form
+		border: 1.5px solid $accent
+		padding: 45px 15px
+		input
+			text-align: center
+			padding-top: 20px
+			padding-bottom: 5px
+			border: none
+			border-bottom: 1.5px solid #B2B2B2
+			width: 90%
+			font-style: italic
+			font-weight: bold
+			font-size: 18px
+.hidden
+	display: none
+
+.custom
+	.zoom-anim-dialog
+		opacity: 0
+		transition: all 0.2s ease-in-out
+		transform: scale(0.8)
+	.zoom-anim-dialog
+		opacity: 1
+		transform: scale(1)
+	&.mfp-bg
+		opacity: 0
+		transition: opacity 0.3s ease-out
+		&.mfp-ready
+			opacity: 0.8
+		&.mfp-removing
+			opacity: 0
+	.mfp-close
+		width: auto
+		font-size: 70px
+		font-weight: normal
+		color: $accent
+		z-index: 999
+		opacity: 1
+		background-color: rgba(0, 0, 0, 0)
+		margin-top: 0
+		top: 0
+		right: 25%
+@import "media" // Always at the end
